@@ -41,6 +41,7 @@ group :development, :test do
   gem 'rspec-rails' #for testing
   gem 'simplecov', require: false
   gem 'pry'
+  gem 'dotenv-rails'
 end
 
 group :development do
