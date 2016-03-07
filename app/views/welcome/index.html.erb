@@ -1,4 +1,8 @@
+<% if !flash[:error].nil? %>
+    <div><%= flash[:error] %></div>
+<% end %>
+
 <h1>How are you feeling today?</h1>
 
-<%= button_to 'Good', root_path(:feeling => "good") %>
-<%= button_to 'Bad', root_path(:feeling => "bad") %>
+<%= button_to 'Good', root_path(:feeling => "positive") %>
+<%= button_to 'Bad', root_path(:feeling => "negative") %>
