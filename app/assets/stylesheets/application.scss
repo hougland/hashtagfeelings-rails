@@ -15,3 +15,11 @@
  */
  @import "bootstrap-sprockets";
  @import "bootstrap";
+
+body {
+  background: image_url("lemons.jpeg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
