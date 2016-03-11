@@ -3,8 +3,25 @@
 <% end %>
 
 <div class="page-header">
-  <h1 id="timeline">Check out <span class="hashtag-name"><%= @hashtag["name"] %>:</span></h1>
+  <h2>You said you feel <%= params[:feeling] %>...</h2>
+  <h1 id="timeline">check out <span class="hashtag-name"><%= @hashtag["name"] %>:</span></h1>
 </div>
+
+<% @tweets.each do |tweet| %>
+  <blockquote class="twitter-tweet">
+    <p><%= tweet.text %></p>
+    — US Dept of Interior (@Interior) <a href="https://twitter.com/Interior/status/<%= tweet.id %>">September 3, 2014</a>
+  </blockquote>
+
+  <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<% end %>
+
+
+
+
+
+
+
 
 <ul class="timeline">
   <% @tweets.each_with_index do |tweet, index| %>
@@ -19,12 +36,12 @@
 
       <div class="timeline-panel">
         <div class="timeline-heading">
+          <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> Posted <%= time_ago_in_words(tweet.created_at) %> ago</small></p>
             <div class="timeline-title">
               <div class="tweetWrapper">
                 <%= tweet.text %>
               </div>
             </div>
-          <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> Posted <%= time_ago_in_words(tweet.created_at) %> ago</small></p>
         </div>
       </div>
     </li>
