@@ -7,3 +7,13 @@
 <%= button_to 'Good', root_path(:feeling => "positive"), class: "btn btn-info btn-lg" %>
 
 <%= button_to 'Bad', root_path(:feeling => "negative"), class: "btn btn-danger btn-lg" %>
+
+<div class="row">
+  <div class="col-md-6">
+    <%= image_tag("good.jpg", class:"btn-feelings") %>
+  </div>
+
+  <div class="col-md-6">
+    <%= image_tag("bad.jpg", class:"btn-feelings") %>
+  </div>
+</div>
