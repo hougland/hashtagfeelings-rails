@@ -3,8 +3,8 @@ class WelcomeController < ApplicationController
   end
 
   def show
-    @hashtag = HTTParty.get("https://hashtagfeelings.herokuapp.com/#{params[:feeling]}")
-    @tweets = $twitter.search("to:justinbieber marry me", result_type: "recent").take(3)
+    @hashtag = HTTParty.get("http://hashtagfeels-92395643.us-east-1.elb.amazonaws.com/#{params[:feeling]}")
+    @tweets = $twitter.search("to:#{@hashtag["name"]}", result_type: "recent").take(10)
 
     if response.code == 500
       flash[:error] = "Button currently not working."
