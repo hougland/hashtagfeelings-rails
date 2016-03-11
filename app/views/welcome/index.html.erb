@@ -2,18 +2,14 @@
     <div><%= flash[:error] %></div>
 <% end %>
 
-<h1>How are you feeling today?</h1>
-
-<%= button_to 'Good', root_path(:feeling => "positive"), class: "btn btn-info btn-lg" %>
-
-<%= button_to 'Bad', root_path(:feeling => "negative"), class: "btn btn-danger btn-lg" %>
+<h1>How do you feel today?</h1>
 
 <div class="row">
   <div class="col-md-6">
-    <%= image_tag("good.jpg", class:"btn-feelings") %>
+    <%= link_to image_tag("good.jpg", class:"btn-feelings"), root_path(:feeling => "positive"), :method => :post %>
   </div>
 
   <div class="col-md-6">
-    <%= image_tag("bad.jpg", class:"btn-feelings") %>
+    <%= link_to image_tag("bad.jpg", class:"btn-feelings"), root_path(:feeling => "negative"), :method => :post %>
   </div>
 </div>

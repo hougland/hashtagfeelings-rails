@@ -2,33 +2,31 @@
     <div><%= flash[:error] %></div>
 <% end %>
 
-<div class="container">
-  <div class="page-header">
-    <h1 id="timeline"><%= @hashtag["name"] %></h1>
-  </div>
+<div class="page-header">
+  <h1 id="timeline">Check out <span class="hashtag-name"><%= @hashtag["name"] %>:</span></h1>
+</div>
 
-  <ul class="timeline">
-    <% @tweets.each_with_index do |tweet, index| %>
-      <!-- decide which side of timeline to post on -->
-      <% if index % 2 == 0 %>
-      <li class="feed">
-      <% else %>
-      <li class="timeline-inverted feed">
-      <% end %>
+<ul class="timeline">
+  <% @tweets.each_with_index do |tweet, index| %>
+    <!-- decide which side of timeline to post on -->
+    <% if index % 2 == 0 %>
+    <li class="feed">
+    <% else %>
+    <li class="timeline-inverted feed">
+    <% end %>
 
-        <div class="timeline-badge muted"><i class="fa fa-twitter"></i></div>
+      <div class="timeline-badge muted"><i class="fa fa-twitter"></i></div>
 
-        <div class="timeline-panel">
-          <div class="timeline-heading">
-              <div class="timeline-title">
-                <div class="tweetWrapper">
-                  <%= tweet.text %>
-                </div>
+      <div class="timeline-panel">
+        <div class="timeline-heading">
+            <div class="timeline-title">
+              <div class="tweetWrapper">
+                <%= tweet.text %>
               </div>
-            <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> Posted <%= time_ago_in_words(tweet.created_at) %> ago</small></p>
-          </div>
+            </div>
+          <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> Posted <%= time_ago_in_words(tweet.created_at) %> ago</small></p>
         </div>
-      </li>
-      <% end %>
-    </ul>
-  </div>
+      </div>
+    </li>
+    <% end %>
+  </ul>

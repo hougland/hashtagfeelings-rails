@@ -27,6 +27,22 @@ body {
 
 h1 {
   text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 50px;
+  margin-bottom: 3%
+}
+
+.hashtag-name {
+  font-style: italic;
+}
+
+.feelings-row {
+  margin-top: 3%;
+  margin-bottom: 3%;
+}
+
+.page-header {
+  border-bottom: 5px solid #eeeeee;
 }
 
 .btn-feelings {
@@ -49,7 +65,7 @@ h1 {
   bottom: 0;
   position: absolute;
   content: " ";
-  width: 3px;
+  width: 6px;
   background-color: #eeeeee;
   left: 50%;
   margin-left: -1.5px;
@@ -89,6 +105,7 @@ h1 {
   position: relative;
   -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
   box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
+  background-color: white;
 }
 
 .timeline > li > .timeline-panel:before {
