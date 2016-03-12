@@ -6,44 +6,20 @@
   <h2>You said you feel <%= params[:feeling] %>...</h2>
   <h1 id="timeline">check out <span class="hashtag-name"><%= @hashtag["name"] %>:</span></h1>
 </div>
-
-<% @tweets.each do |tweet| %>
-  <blockquote class="twitter-tweet">
-    <p><%= tweet.text %></p>
-    — US Dept of Interior (@Interior) <a href="https://twitter.com/Interior/status/<%= tweet.id %>">September 3, 2014</a>
-  </blockquote>
-
-  <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-<% end %>
+<div class="row">
 
 
-
-
-
-
-
-
-<ul class="timeline">
   <% @tweets.each_with_index do |tweet, index| %>
-    <!-- decide which side of timeline to post on -->
-    <% if index % 2 == 0 %>
-    <li class="feed">
-    <% else %>
-    <li class="timeline-inverted feed">
-    <% end %>
+  <div class="tweets">
 
-      <div class="timeline-badge muted"><i class="fa fa-twitter"></i></div>
+        <blockquote class="twitter-tweet">
+          <a href="https://twitter.com/Interior/status/<%= tweet.id %>"></a>
+        </blockquote>
 
-      <div class="timeline-panel">
-        <div class="timeline-heading">
-          <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> Posted <%= time_ago_in_words(tweet.created_at) %> ago</small></p>
-            <div class="timeline-title">
-              <div class="tweetWrapper">
-                <%= tweet.text %>
-              </div>
-            </div>
-        </div>
+        <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
       </div>
-    </li>
-    <% end %>
-  </ul>
+
+  <% end %>
+</div>
+
+</div>
