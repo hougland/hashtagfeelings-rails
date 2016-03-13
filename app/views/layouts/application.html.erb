@@ -6,14 +6,11 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
     <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+    <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
   </head>
   <body>
-
-    <div class="container">
-      <h1><%= link_to "#Feels", root_path %></h1>
       <%= yield %>
-    </div>
-
   </body>
 
 </html>

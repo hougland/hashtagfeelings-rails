@@ -2,24 +2,22 @@
     <div><%= flash[:error] %></div>
 <% end %>
 
-<div class="page-header">
-  <h2>You said you feel <%= params[:feeling] %>...</h2>
-  <h1 id="timeline">check out <span class="hashtag-name"><%= @hashtag["name"] %>:</span></h1>
+<div class="page-header jumbotron">
+  <div class="container">
+    <h1><%= link_to "#Feels", root_path %></h1>
+    <h2 id="tagline">You said you feel <%= params[:feeling] %>...</h2>
+    <h1 id="check-out-tag">check out <span class="hashtag-name"><%= @hashtag["name"] %></span></h1>
+  </div>
 </div>
-<div class="row">
 
-
-  <% @tweets.each_with_index do |tweet, index| %>
-  <div class="tweets">
-
+<div class="container">
+  <div class="row">
+    <% @tweets.each_with_index do |tweet, index| %>
+      <div class="tweets">
         <blockquote class="twitter-tweet">
           <a href="https://twitter.com/Interior/status/<%= tweet.id %>"></a>
         </blockquote>
-
-        <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
       </div>
-
-  <% end %>
-</div>
-
+    <% end %>
+  </div>
 </div>
