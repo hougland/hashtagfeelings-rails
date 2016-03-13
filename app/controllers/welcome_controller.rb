@@ -3,6 +3,12 @@ class WelcomeController < ApplicationController
   end
 
   def show
+    if params[:feeling] == "positive"
+      @feeling = "good"
+    elsif params[:feeling] == "negative"
+      @feeling = "bad"
+    end
+
     @hashtag = HTTParty.get("http://hashtagfeels-92395643.us-east-1.elb.amazonaws.com/#{params[:feeling]}")
     @tweets = $twitter.search(@hashtag["name"]).take(8)
 

@@ -1,15 +1,20 @@
 <% if !flash[:error].nil? %>
     <div><%= flash[:error] %></div>
 <% end %>
-
-<h1>How do you feel today?</h1>
-
-<div class="row">
-  <div class="col-md-6">
-    <%= link_to image_tag("good.jpg", class:"btn-feelings"), root_path(:feeling => "positive"), :method => :post %>
+<div class="page-header jumbotron">
+  <div class="container">
+    <h1>How do you feel today?</h1>
   </div>
+</div>
 
-  <div class="col-md-6">
-    <%= link_to image_tag("bad.jpg", class:"btn-feelings"), root_path(:feeling => "negative"), :method => :post %>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <%= link_to image_tag("good.jpg", class:"btn-feelings"), root_path(:feeling => "positive"), :method => :post %>
+    </div>
+
+    <div class="col-md-6">
+      <%= link_to image_tag("bad.jpg", class:"btn-feelings"), root_path(:feeling => "negative"), :method => :post %>
+    </div>
   </div>
 </div>
