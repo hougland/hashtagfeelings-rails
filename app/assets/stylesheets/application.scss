@@ -17,36 +17,45 @@
  @import "bootstrap";
  @import "font-awesome";
 
+
+ .tweets-row {
+   display: block;
+   width: 100%;
+   margin: 5% auto;
+ }
+
+ .tweets {
+   display: block;
+   width: 49%;
+   margin: 0 0 2%;
+   float: left;
+   clear: left;
+ }
+
+ .right {
+   float: right;
+   clear: right;
+ }
+
 h1 {
   text-align: center;
   font-size: 50px;
   margin-bottom: 3%
 }
 
-#tagline {
-
-}
-
-.check-out-tag {
-  text-align: right;
-}
-
+// #feels logo in top left
 .feels-logo {
   font-family: 'Delius Unicase', cursive;
   font-size: 30px;
 }
 
+// headers on both pages
 .how-do-you-feel {
   font-family: 'Ribeye Marrow', cursive;
 }
 
 .jumbotron h1, .jumbotron .h1 {
   font-size: 80px;
-}
-
-.feelings-row {
-  margin-top: 3%;
-  margin-bottom: 3%;
 }
 
 .navbar {
@@ -62,6 +71,7 @@ h1 {
   margin-top: 0;
 }
 
+// good and bad buttons
 .btn-feelings {
   display: block;
   margin-left: auto;

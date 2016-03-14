@@ -14,3 +14,19 @@
 //= require bootstrap-sprockets
 //= require jquery_ujs
 //= require_tree .
+
+$(function() {
+  var adjustArticleHeights = (function () {
+     var leftColumnHeight = 0,
+       rightColumnHeight = 0,
+       $articles = $('.tweets');
+     for (var i = 0; i < $articles.length; i++) {
+       if (leftColumnHeight > rightColumnHeight) {
+         rightColumnHeight += $articles.eq(i).addClass('right').outerHeight(true);
+       } else {
+         leftColumnHeight += $articles.eq(i).outerHeight(true);
+       }
+     }
+     return $articles;
+   })();
+ });
