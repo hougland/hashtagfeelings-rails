@@ -1,13 +1,12 @@
-<% if !flash[:error].nil? %>
-    <div><%= flash[:error] %></div>
-<% end %>
-
 <div class="page-header jumbotron">
   <div class="container">
-    <h1><%= link_to "#Feels", root_path %></h1>
     <h2 id="tagline">You said you feel <%= @feeling %>...</h2>
     <h1 id="check-out-tag">check out <span class="hashtag-name"><%= @hashtag["name"] %></span></h1>
   </div>
+</div>
+
+<div class="container">
+  <%= render partial: "layouts/flash_messages", flash: flash %>
 </div>
 
 <div class="container">

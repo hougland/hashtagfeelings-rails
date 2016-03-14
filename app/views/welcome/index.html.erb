@@ -1,11 +1,11 @@
-<% if !flash[:error].nil? %>
-    <div><%= flash[:error] %></div>
-<% end %>
-
 <div class="page-header jumbotron">
   <div class="container">
     <h1>How do you feel today?</h1>
   </div>
+</div>
+
+<div class="container">
+  <%= render partial: "layouts/flash_messages", flash: flash %>
 </div>
 
 <div class="container">
