@@ -2,18 +2,17 @@
     <div><%= flash[:error] %></div>
 <% end %>
 
-<% if @current_user.nil? %>
-  <%= link_to "Log in", "/auth/twitter/" %>
-<% else %>
-  <%= link_to "Log out", "/logout", :method => :delete %>
-<% end %>
-
-
 <div class="page-header jumbotron">
   <div class="container">
     <h1>How do you feel today?</h1>
   </div>
 </div>
+
+<% if @current_user.nil? %>
+  <%= link_to "Log in", "/auth/twitter/" %>
+<% else %>
+  <%= link_to "Log out", "/logout", :method => :delete %>
+<% end %>
 
 <div class="container">
   <div class="row">
