@@ -1,9 +1,10 @@
+require 'uri'
+
 class WelcomeController < ApplicationController
   before_action :current_user
   before_action :require_login, only: :show
 
-  def index
-  end
+  def index; end
 
   def show
     if params[:feeling] == "positive"
@@ -14,6 +15,7 @@ class WelcomeController < ApplicationController
 
     @hashtag = HTTParty.get("http://hashtagfeels-92395643.us-east-1.elb.amazonaws.com/#{params[:feeling]}")
     @tweets = $twitter.search(@hashtag["name"]).take(8)
+    @search_url = get_search_url(@hashtag["name"])
 
     if response.code == 500
       flash[:error] = "Button currently not working."
@@ -21,5 +23,9 @@ class WelcomeController < ApplicationController
     else
       render :show
     end
+  end
+
+  def get_search_url(hashtag)
+    return URI.escape("https://twitter.com/search?q=#{hashtag}")
   end
 end
