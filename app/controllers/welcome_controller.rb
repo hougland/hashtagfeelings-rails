@@ -1,4 +1,7 @@
 class WelcomeController < ApplicationController
+  before_action :current_user
+  before_action :require_login, only: :show
+
   def index
   end
 

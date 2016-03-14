@@ -17,7 +17,8 @@ class SessionsController < ApplicationController
   end
 
   def destroy
-    self.current_user = nil
-    redirect_to root_path, notice: "Signed out!"
+    session[:user_id] = nil if session[:user_id]
+    flash[:notice] = "You have been logged out."
+    redirect_to root_path
   end
 end
