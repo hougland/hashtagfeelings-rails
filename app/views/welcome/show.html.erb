@@ -9,10 +9,10 @@
 </div>
 
 <div class="container">
-  <div class="row tweets-row">
-    <% @tweets.each_with_index do |tweet, index| %>
+  <div class="tweets-row">
+    <% @tweets.each do |tweet| %>
       <div class="tweets">
-        <blockquote class="twitter-tweet">
+        <blockquote class="twitter-tweet tw-align-center">
           <a href="https://twitter.com/Interior/status/<%= tweet.id %>"></a>
         </blockquote>
       </div>
