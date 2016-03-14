@@ -48,6 +48,12 @@ group :development, :test do
   gem 'simplecov', require: false
   gem 'pry'
   gem 'dotenv-rails'
+  gem 'factory_girl_rails'
+end
+
+group :test do
+  gem 'vcr', '~> 3.0', '>= 3.0.1'
+  gem 'webmock', '~> 1.22', '>= 1.22.6'
 end
 
 group :development do
