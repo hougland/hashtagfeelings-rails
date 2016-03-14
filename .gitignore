@@ -24,3 +24,5 @@
 !.elasticbeanstalk/*.global.yml
 
 /public/.DS_Store
+
+/coverage/
