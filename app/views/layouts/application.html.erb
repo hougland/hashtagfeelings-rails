@@ -1,15 +1,13 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>HashtagfeelingsRails</title>
+    <title>feels</title>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
-    <link href='https://fonts.googleapis.com/css?family=Delius+Unicase' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Cedarville+Cursive|Averia+Sans+Libre|Comfortaa|Codystar|Offside|Ribeye+Marrow' rel='stylesheet' type='text/css'>
+    <%= favicon_link_tag 'favicon.ico' %>
+    <link href='https://fonts.googleapis.com/css?family=Delius+Unicase|Ribeye+Marrow' rel='stylesheet' type='text/css'>
     <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-    <% favicon_link_tag 'favicon.ico' %>
-
   </head>
   <body>
     <%= render 'layouts/navbar.html.erb' %>
