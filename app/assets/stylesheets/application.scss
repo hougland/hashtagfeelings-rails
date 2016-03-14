@@ -19,7 +19,6 @@
 
 h1 {
   text-align: center;
-  font-family: 'Montserrat', sans-serif;
   font-size: 50px;
   margin-bottom: 3%
 }
@@ -28,21 +27,21 @@ h1 {
 
 }
 
-#check-out-tag {
+.check-out-tag {
   text-align: right;
 }
 
 .feels-logo {
   font-family: 'Delius Unicase', cursive;
-  font-size: 35px;
+  font-size: 30px;
 }
 
-.navbar-default .navbar-brand {
-    color: black;
+.how-do-you-feel {
+  font-family: 'Ribeye Marrow', cursive;
 }
 
-.hashtag-name {
-  font-style: italic;
+.jumbotron h1, .jumbotron .h1 {
+  font-size: 80px;
 }
 
 .feelings-row {
