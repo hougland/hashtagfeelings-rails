@@ -17,35 +17,9 @@
  @import "bootstrap";
  @import "font-awesome";
 
-
- .tweets-row {
-   display: block;
-   width: 100%;
-   margin: auto;
-
- }
-
- .tweets {
-   display: block;
-   width: 49%;
-   margin: 0 0 2%;
-   float: left;
-   clear: left;
- }
-
- .right {
-   float: right;
-   clear: right;
- }
-
- .embeddedtweet {
-   margin: auto;
- }
-
-h1 {
-  text-align: center;
-  font-size: 50px;
-  margin-bottom: 3%
+// table display of embedded tweets
+td {
+  vertical-align:top;
 }
 
 // #feels logo in top left
@@ -57,6 +31,12 @@ h1 {
 // headers on both pages
 .how-do-you-feel {
   font-family: 'Ribeye Marrow', cursive;
+}
+
+h1 {
+  text-align: center;
+  font-size: 50px;
+  margin-bottom: 3%
 }
 
 .jumbotron h1, .jumbotron .h1 {

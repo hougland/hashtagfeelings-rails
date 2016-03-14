@@ -8,14 +8,68 @@
   <%= render partial: "layouts/flash_messages", flash: flash %>
 </div>
 
+<!-- <div class="container">
+  <div class="row">
+  <% @tweets.each do |tweet| %>
+    <div class="tweets">
+      <blockquote class="twitter-tweet tw-align-center">
+        <a href="https://twitter.com/Interior/status/<%= tweet.id %>"></a>
+      </blockquote>
+    </div>
+  <% end %>
+</div>
+</div> -->
+
 <div class="container">
-  <div class="tweets-row">
-    <% @tweets.each do |tweet| %>
-      <div class="tweets">
-        <blockquote class="twitter-tweet tw-align-center">
-          <a href="https://twitter.com/Interior/status/<%= tweet.id %>"></a>
-        </blockquote>
-      </div>
-    <% end %>
+  <div class="row">
+    <table style="width:100%">
+      <tr>
+        <td>
+          <div class="tweets">
+            <blockquote class="twitter-tweet tw-align-center">
+              <a href="https://twitter.com/Interior/status/<%= @tweets[0].id %>"></a>
+            </blockquote>
+          </div>
+          <div class="tweets">
+            <blockquote class="twitter-tweet tw-align-center">
+              <a href="https://twitter.com/Interior/status/<%= @tweets[2].id %>"></a>
+            </blockquote>
+          </div>
+          <div class="tweets">
+            <blockquote class="twitter-tweet tw-align-center">
+              <a href="https://twitter.com/Interior/status/<%= @tweets[4].id %>"></a>
+            </blockquote>
+          </div>
+          <div class="tweets">
+            <blockquote class="twitter-tweet tw-align-center">
+              <a href="https://twitter.com/Interior/status/<%= @tweets[6].id %>"></a>
+            </blockquote>
+          </div>
+        </td>
+        <td>
+          <div class="tweets">
+            <blockquote class="twitter-tweet tw-align-center">
+              <a href="https://twitter.com/Interior/status/<%= @tweets[1].id %>"></a>
+            </blockquote>
+          </div>
+          <div class="tweets">
+            <blockquote class="twitter-tweet tw-align-center">
+              <a href="https://twitter.com/Interior/status/<%= @tweets[3].id %>"></a>
+            </blockquote>
+          </div>
+          <div class="tweets">
+            <blockquote class="twitter-tweet tw-align-center">
+              <a href="https://twitter.com/Interior/status/<%= @tweets[5].id %>"></a>
+            </blockquote>
+          </div>
+          <div class="tweets">
+            <blockquote class="twitter-tweet tw-align-center">
+              <a href="https://twitter.com/Interior/status/<%= @tweets[7].id %>"></a>
+            </blockquote>
+          </div>
+        </td>
+      </tr>
+    </table>
   </div>
+
 </div>
