@@ -13,6 +13,14 @@ RSpec.describe SessionsController, type: :controller do
       end
     end
 
+    context "with nil auth hash data" do
+      it "gives flash notice" do
+        request.env["omniauth.auth"] = {}
+        get :create, provider: :twitter
+        expect(flash[:notice]).to be_present
+      end
+    end
+
     context "user tries to log in with same provider" do
       before { request.env["omniauth.auth"] = OmniAuth.config.mock_auth[:twitter] }
       it "redirects to home page" do
