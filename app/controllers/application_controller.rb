@@ -9,9 +9,7 @@ class ApplicationController < ActionController::Base
 
   def require_login
     unless current_user
-      flash[:error] = "Please log in to view this section."
       redirect_to root_path
     end
   end
-
 end

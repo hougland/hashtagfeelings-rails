@@ -21,6 +21,6 @@
 </div>
 
 <!-- Login Modal -->
-<% if @current_user.nil? %>
+<% if @display_popup %>
   <%= render "layouts/login" %>
 <% end %>

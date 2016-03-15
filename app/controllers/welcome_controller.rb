@@ -4,7 +4,9 @@ class WelcomeController < ApplicationController
   before_action :current_user
   before_action :require_login, only: :show
 
-  def index; end
+  def index
+    @display_popup = display_popup?
+  end
 
   def show
     if params[:feeling] == "positive"
@@ -27,5 +29,11 @@ class WelcomeController < ApplicationController
 
   def get_search_url(hashtag)
     return URI.escape("https://twitter.com/search?q=#{hashtag}")
+  end
+
+  def display_popup?
+    if @current_user.nil?
+      return true
+    end
   end
 end
