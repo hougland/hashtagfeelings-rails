@@ -10,7 +10,7 @@ RSpec.describe WelcomeController, type: :controller do
     end
   end
 
-  describe "POST #show" do
+  describe "POST #show", :vcr do
     context "when not logged in" do
       it "redirects to root" do
         post :show
