@@ -8,6 +8,8 @@ class WelcomeController < ApplicationController
     @display_popup = display_popup?
   end
 
+  def about; end
+
   def show
     if params[:feeling] == "positive"
       @feeling = "good"
