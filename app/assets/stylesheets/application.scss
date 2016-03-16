@@ -47,11 +47,7 @@
  // headers on both pages
  .how-do-you-feel {
    font-family: 'Ribeye Marrow', cursive;
- }
-
- h1 {
    text-align: center;
-   font-size: 50px;
    margin-bottom: 3%
  }
 
@@ -102,11 +98,20 @@ td {
   text-align: center;
 }
 
-h4 {
+h4 #myModal {
   margin-top: 40px;
   margin-bottom: 40px;
 }
 
 .modal-body {
   padding-bottom: 30px;
+}
+
+// about page
+.icon-github {
+  text-align: center;
+}
+
+.github-links {
+  margin-top: 9px;
 }
