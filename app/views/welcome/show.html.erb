@@ -60,7 +60,11 @@
     </table>
   </div>
 
-  <div class="row">
-    <%= link_to "see more on twitter", @search_url, class: "btn btn-primary btn-lg btn-block twitter-btn", target: "_blank" %>
+  <div class="row btn-row">
+      <%= link_to "see more on twitter", @search_url, class: "btn btn-primary btn-lg btn-more", target: "_blank" %>
+
+      <h4 class="or-h4"> - or - </h4>
+
+      <%= link_to "get another ##{@feeling} trend", root_path(:feeling => "positive"), :method => :post, class: "btn btn-success btn-lg btn-more" %>
   </div>
 </div>

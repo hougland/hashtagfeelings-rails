@@ -64,17 +64,28 @@ td {
   vertical-align:top;
 }
 
+.btn-row {
+  text-align: center;
+}
+
+.btn-more {
+  width: 35%;
+}
+
+.or-h4 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 20px;
+  margin-right: 20px;
+  text-align: center;
+  display: inline-block;
+}
+
 // footer
 .footer {
   text-align: center;
   color: #777777;
   margin-top: 1%;
-}
-
-// button to view more on twitter
-.twitter-btn {
-  margin-bottom: 3%;
-  margin-top: 1%
 }
 
 // good and bad buttons
