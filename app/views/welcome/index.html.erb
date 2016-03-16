@@ -11,11 +11,16 @@
 <div class="container">
   <div class="row">
     <div class="col-md-6">
-      <%= link_to image_tag("good.jpg", class:"btn-feelings"), root_path(:feeling => "positive"), :method => :post %>
+      <%= link_to image_tag("colorlightgood.jpg", class:"btn-feelings"), root_path(:feeling => "positive"), :method => :post %>
     </div>
 
     <div class="col-md-6">
-      <%= link_to image_tag("bad.jpg", class:"btn-feelings"), root_path(:feeling => "negative"), :method => :post %>
+      <%= link_to image_tag("badcolor.jpg", class:"btn-feelings"), root_path(:feeling => "negative"), :method => :post %>
     </div>
   </div>
 </div>
+
+<!-- Login Modal -->
+<% if @display_popup %>
+  <%= render "layouts/login" %>
+<% end %>
