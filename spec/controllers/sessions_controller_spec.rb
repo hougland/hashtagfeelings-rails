@@ -17,7 +17,7 @@ RSpec.describe SessionsController, type: :controller do
       it "gives flash notice" do
         request.env["omniauth.auth"] = {}
         get :create, provider: :twitter
-        expect(flash[:notice]).to be_present
+        expect(flash[:error]).to be_present
       end
     end
 
