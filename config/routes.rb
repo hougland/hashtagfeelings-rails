@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   post '/' => 'welcome#show'
   get '/about' => 'welcome#about', as: :about
 
-  get "/auth/:provider", to: "sessions#create"
+  get "/auth/:provider/callback", to: "sessions#create"
   delete "/logout", to: 'sessions#destroy', as: :logout
 
 end
