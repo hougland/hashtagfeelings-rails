@@ -4,7 +4,8 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5.2'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+# gem 'sqlite3'
+gem 'pg'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -49,11 +50,13 @@ group :development, :test do
   gem 'pry'
   gem 'dotenv-rails'
   gem 'factory_girl_rails'
+  gem 'sqlite3'
 end
 
 group :test do
   gem 'vcr', '~> 3.0', '>= 3.0.1'
   gem 'webmock', '~> 1.22', '>= 1.22.6'
+  gem "codeclimate-test-reporter", require: nil
 end
 
 group :development do
