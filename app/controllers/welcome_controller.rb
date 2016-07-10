@@ -6,6 +6,7 @@ class WelcomeController < ApplicationController
 
   def index
     @display_popup = display_popup?
+    puts "TESTING IF THIS LOGS"
   end
 
   def about; end
