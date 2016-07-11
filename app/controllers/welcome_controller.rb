@@ -18,7 +18,7 @@ class WelcomeController < ApplicationController
       @feeling = "bad"
     end
 
-    @hashtag = HTTParty.get("http://hashtagfeels-92395643.us-east-1.elb.amazonaws.com/#{params[:feeling]}")
+    @hashtag = HTTParty.get("https://hashtagfeels-api.herokuapp.com/#{params[:feeling]}")
     @tweets = $twitter.search(@hashtag["name"]).take(8)
     @search_url = get_search_url(@hashtag["name"])
 
